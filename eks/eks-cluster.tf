@@ -16,4 +16,12 @@ resource "aws_eks_cluster" "caryak-eks-cluster" {
     endpoint_public_access = false
     endpoint_private_access = true
   }
+
+  tags = {
+    "alpha.eksctl.io/cluster-oidc-enabled" = "true"
+  }
+
+  tags_all = {
+    "alpha.eksctl.io/cluster-oidc-enabled" = "true"
+  }
 }
